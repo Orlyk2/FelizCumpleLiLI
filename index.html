@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Tía Lili</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://raw.githubusercontent.com/Orlyk2/feliz-cimplea-os-TiaMartha/main/213.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+        }
+        .birthday-message {
+            margin-top: 20px;
+            padding: 20px;
+            border: 5px solid #ffb3b3;
+            border-radius: 20px;
+            background-color: rgba(255, 230, 230, 0.8);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+        .birthday-message h1 {
+            font-size: 3em;
+            animation: colorChange 2s infinite, move 1s infinite alternate;
+        }
+        .birthday-message p {
+            font-size: 1.5em;
+            animation: colorChange 2s infinite, move 1s infinite alternate;
+        }
+        @keyframes colorChange {
+            0% { color: #ff66b2; }
+            20% { color: #ff9933; }
+            40% { color: #ffff66; }
+            60% { color: #66ff66; }
+            80% { color: #66b3ff; }
+            100% { color: #ff66b2; }
+        }
+        @keyframes move {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        .roses {
+            margin: 20px 0;
+        }
+        .roses img {
+            width: 50px;
+            margin: 0 5px;
+        }
+        .video-container {
+            margin-top: 20px;
+            padding: 20px;
+            border: 3px solid #ffccff;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        .footer-message {
+            margin-top: 40px;
+            font-size: 1.5em;
+            animation: colorChangeFooter 2s infinite, moveFooter 1s infinite alternate;
+        }
+        @keyframes colorChangeFooter {
+            0% { color: #ff66b2; }
+            20% { color: #ff9933; }
+            40% { color: #ffff66; }
+            60% { color: #66ff66; }
+            80% { color: #66b3ff; }
+            100% { color: #ff66b2; }
+        }
+        @keyframes moveFooter {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        /* Estilos para el juego */
+        .game-container {
+            margin-top: 30px;
+            padding: 20px;
+        }
+        .game-image {
+            width: 100px;
+            cursor: pointer;
+            transition: transform 0.5s, border 0.5s;
+        }
+        .game-image:hover {
+            transform: scale(1.2);
+            border: 5px solid gold;
+        }
+        .hidden-image {
+            display: none;
+            width: 300px;
+            border: 5px solid gold;
+            animation: zoomInOut 3s infinite;
+        }
+        @keyframes zoomInOut {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+    </style>
+    <script>
+        function showImage() {
+            var hiddenImage = document.getElementById("hiddenImage");
+            hiddenImage.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="birthday-message">
+            <h1>¡Feliz Cumpleaños TÍA LILI!</h1>
+            <p>Hoy celebramos no solo tu cumpleaños, sino también la fortaleza y el coraje con los que siempre te has destacado. Eres una verdadera guerrera, alguien que ha sabido enfrentarse a cualquier desafío y salir adelante con determinación y firmeza. 
+
+                Admiramos tu espíritu luchador, tu dedicación incansable y cómo siempre te levantas ante cualquier adversidad, demostrando que no hay reto demasiado grande para ti. Eres un ejemplo para todos nosotros, y valoramos profundamente tu capacidad para marcar la diferencia y alcanzar lo que te propones. 
+                
+                Que este nuevo año te traiga aún más motivos para celebrar, disfrutar y seguir conquistando metas. ¡Te queremos y te admiramos muchísimo!
+            </p>
+            <div class="roses">
+                <img src="https://raw.githubusercontent.com/Orlyk2/feliz-cimplea-os-TiaMartha/main/3423.png" alt="Flower">
+                <!-- Repite esta línea según sea necesario -->
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/r6ZoRgCWBTU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="footer-message">
+            De tu sobrino Yohan Orlando, muchas felicidades en tu día.
+        </div>
+
+        <!-- Juego: Hacer clic para mostrar imagen -->
+        <div class="game-container">
+            <h2>¡Haz clic en la imagen para descubrir una sorpresa!</h2>
+            <img class="game-image" src="https://raw.githubusercontent.com/Orlyk2/feliz-cimplea-os-TiaMartha/main/3423.png" alt="Clic para sorpresa" onclick="showImage()">
+            <div>
+                <img id="hiddenImage" class="hidden-image" src="https://github.com/Orlyk2/feliz-cimplea-os-TiaMartha/blob/f85e4d36efb5eaaedd2d067dd7e01eaf79ddb717/3434.gif?raw=true" alt="Sorpresa">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
